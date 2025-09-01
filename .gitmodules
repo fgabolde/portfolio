@@ -1,3 +1,3 @@
-[submodule "themes/beautifulhugo"]
-	path = themes/beautifulhugo
-	url = https://github.com/halogenica/beautifulhugo.git
+[submodule "themes/hugo-devresume-theme"]
+	path = themes/hugo-devresume-theme
+	url = https://github.com/cowboysmall-tools/hugo-devresume-theme.git
