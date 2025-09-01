@@ -53,7 +53,7 @@ details = "Kubernetes, Helm, Docker"
 [[params.skills.list.items]]
 details = "HTTP API design"
 [[params.skills.list.items]]
-details = "Relational database schemas that make sense and perform "
+details = "Relational database schemas that make sense"
 [[params.skills.list.items]]
 details = "Complex but maintainable software systems"
 
