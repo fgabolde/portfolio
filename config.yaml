@@ -1,0 +1,210 @@
+theme: hugo-devresume-theme
+relativeURLs: true
+baseURL: /
+title: Fabrice Gabolde's portfolio
+params:
+  author: Fabrice Gabolde
+  description: Fabrice Gabolde's portfolio static website
+  primaryColor: "#54B689"
+  textPrimaryColor: "#292929"
+  profile:
+    enable: true
+    name: Fabrice Gabolde
+    tagline: Senior Software Engineer
+    avatar: avatar.jpeg
+  contact:
+    enable: true
+    location: Paris, France
+    list:
+      - icon: fas fa-phone-square
+        url: tel:#
+        text: +33 6 07 61 18 61
+      - icon: fas fa-envelope-square
+        url: mailto:#
+        text: fabrice.gabolde@gmail.com
+      - icon: fas fa-globe
+        url: "#"
+        text: portfolio.pokki.net
+  skills:
+    enable: true
+    list:
+      - title: Technical
+        items:
+          - details: Java 11 to 21
+          - details: Perl, Clojure, some Python
+          - details: Relational SQL (MySQL/MariaDB, Postgres); Snowflake
+          - details: Redis, Elasticsearch
+          - details: OpenAPI, Terraform, Git, GitLab
+          - details: Kubernetes, ArgoCD, Helm, Docker
+          - details: HTTP API design
+          - details: Relational database schemas that make sense
+          - details: Complex but maintainable software systems
+      - title: Professional
+        items:
+          - details: Effective communication
+          - details: Team player
+          - details: Strong problem solver
+          - details: Good time management
+  education:
+    enable: true
+    list:
+      - degree: Engineering Degree in Computer Science
+        university: Institut National des Sciences Appliquées de Lyon
+        dates: 2005 - 2010
+      - degree: MSc in Computer Science
+        university: Université Claude Bernard Lyon 1
+        dates: 2009 - 2010
+  awards:
+    enable: false
+    list:
+      - name: Award Lorem Ipsum
+        body: Microsoft lorem ipsum
+        date: "2019"
+      - name: Award Donec Sodales
+        body: Oracle Aenean
+        date: "2017"
+  languages:
+    enable: true
+    list:
+      - name: French
+        level: Native
+      - name: English
+        level: Professional
+      - name: Spanish
+        level: Conversational
+  interests:
+    enable: true
+    list:
+      - name: Table-top role playing games
+      - name: Reading
+  summary:
+    enable: true
+    text: |-
+      I'm a primarily Java developer who thrives when building foundations for the rest of the team. I love creating
+      tooling, improving DX, ensuring that other engineers have an experience as painless as possible. Along the way,
+      I've somehow gotten pretty good at designing HTTP APIs, RESTful or not.
+
+      I enjoy a variety of styles of programming languages: imperative (Java, Perl) or functional (Clojure),
+      object-oriented or not. I know when to use design patterns and when to avoid them. Enough DevOps skills to
+      competently shoot myself in the foot. _Strong_ opinions on Hibernate.
+
+      This resume is entirely LLM-free.
+  experience:
+    enable: true
+    list:
+      - title: Senior Software Engineer
+        dates: 2019 - Present
+        company: Weborama
+        details: >-
+          Lead developer for a team of 3 other backend and API developers, working in close cooperation with the
+          frontend team, backend processing team, and SRE. During that time, I was able to design the architecture for
+          several core services at Weborama. In addition, I led CI and Observability tooling, developer support and
+          evangelism for the Java software development teams of Weborama.
+        items:
+          - details: >-
+              Led the transition for multiple applications from relying on several legacy in-house authentication
+              systems to a unified SSO experience with OIDC using **Keycloak**. This was critical to allow applications
+              to present a single experience for users instead of completely detached workflows.
+          - details: >-
+              Lead architect on Data Hub, the core service for managing **Snowflake** customer data silos. Built a
+              **database analysis tool** with the goal of making customer datasets available and discoverable within
+              other Weborama applications. Making the decision to use database metadata to discover new and modified
+              application datasets asynchronously allowed applications to create datasets with all the expressiveness of
+              Snowflake SQL, leading to fast and painless integration.
+          - details: >-
+              Designed a modular architecture for pluggable applications on Data Hub, allowing other teams (including
+              external teams) to develop and deploy applications for the platform. This required a particular focus on
+              security, credentials and privileges management, and communication and coordination with multiple teams.
+          - details: >-
+              Refactored Java CI across the company to use **GitLab CI** templates and components instead of
+              copy-pasting pipelines. Deployed [Renovate](https://docs.renovatebot.com/) to keep dependencies up to date
+              on dozens of software components.
+      - title: Software Engineer
+        dates: 2014 - 2019
+        company: Weborama
+        details: >-
+          Design and implementation for a large refactor of an existing application to use a modern Java JDK and
+          Spring Boot instead of Perl 5.12.
+        items:
+          - details: >-
+              Designed and built several features for human-guided generation of word clouds from a large corpus of web
+              content, to help in scoring user profiles along user-built topics. This project involved building a JSON
+              HTTP API using **Perl 5**, **[Dancer](https://metacpan.org/pod/Dancer)**, and MariaDB; later ported to
+              **Java 8/11** and **Spring Web MVC**.
+          - details: >-
+              Participated in the transition from behavioral-based user profiling (cookies) to contextual-based (no
+              cookies) and back again (depending on the Google Chrome team's mood of the day), building API features as
+              needed to support new use cases and integrate with external providers.
+          - details: >-
+              Participated in the design of a big data pipeline for building user profiles for advertising: large scale
+              web crawling with built-in rate-limiting, following `robots.txt`, and analyzing the page text using
+              decluttering heuristics and OpenNLP. Using **Apache Storm** and **HBase**, we were able to reach high
+              volumes of daily page fetches and user profiles.
+          - details: >-
+              Introduced **OpenAPI** at Weborama to describe HTTP APIs instead of older, low-adoption formats like
+              [SPORE](https://spore.github.io/), or manually written and unmaintained documentation, and built much of
+              the company tooling for taking advantage of it. As a result, teams were able to generate up to date SDKs,
+              API request validation was easier to implement, and API documentation quality, freshness, and coverage
+              were significantly raised.
+      - title: Software Developer
+        dates: 2011 - 2014
+        company: Devoteam SA
+        details: >-
+          Part of the Uperto open-source team at Devoteam, with a focus on Perl and network monitoring technologies.
+        items:
+          - details: >-
+              Implemented and helped design an **LMTP** proxy written in **Perl 5** for automatically encrypting emails
+              containing sensitive medical information for the French Social Security IT systems. As a result, operators
+              were able to use email aliases in their regular Outlook/Exchange setup to ensure that patient details were
+              encrypted in transit using **GPG**.
+          - details: >-
+              Part of a project implementing a large French telco operator's generalization of SNMP usage. Using the
+              **Perl 5** software built by my team, the telco was able to switch from dozens of handcrafted telnet
+              scripts querying routers for bandwidth usage stats, to generic **SNMP** queries feeding **Zabbix**
+              servers.
+          - details: >-
+              Refactored and maintained a **Perl 5** and **Oracle 10** based tool for generating reporting data for
+              monitoring SLAs for a large French bank, running on Solaris.
+  projects:
+    enable: false
+    list:
+      - title: Project Lorem Ipsum
+        meta: Open Source
+        tagline:
+          You can use this section for your side projects. Lorem ipsum dolor sit
+          amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+          Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus.
+      - title: Project Sed Fringilla
+        meta: Open Source
+        tagline:
+          You can use this section for your side projects. Cras dapibus. Vivamus
+          elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+          ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+      - title: Project Praesent
+        meta: Open Source
+        tagline:
+          You can use this section for your side projects. Cras dapibus. Vivamus
+          elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+          ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+  information:
+    enable: false
+    list:
+      - title: Papers
+        items:
+          - details: 2018 · Lorem Ipsum
+          - details: 2016 · Sed Fringilla
+      - title: Interests
+        details: Climbing, Snowboarding, Photography, Travelling
+  social:
+    enable: true
+    list:
+      - icon: fab fa-github-square
+        url: //github.com/fgabolde
+        title: fgabolde
+      - icon: fab fa-linkedin
+        url: //linkedin.com/in/fgabolde
+        title: fgabolde
+      - icon: fas fa-user
+        url: //bsky.app/profile/pokki.net
+        title: "@pokki.net on Bluesky"
